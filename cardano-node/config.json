@@ -14,13 +14,13 @@
   "ShelleyGenesisFile": "shelley-genesis.json",
   "ShelleyGenesisHash": "1a3be38bcbb7911969283716ad7aa550250226b76a61fc51cc9a9a35d9276d81",
   "TraceAcceptPolicy": true,
-  "TraceBlockFetchClient": false,
-  "TraceBlockFetchDecisions": false,
+  "TraceBlockFetchClient": true,
+  "TraceBlockFetchDecisions": true,
   "TraceBlockFetchProtocol": false,
-  "TraceBlockFetchProtocolSerialised": false,
+  "TraceBlockFetchProtocolSerialised": true,
   "TraceBlockFetchServer": false,
   "TraceChainDb": true,
-  "TraceChainSyncBlockServer": false,
+  "TraceChainSyncBlockServer": true,
   "TraceChainSyncClient": false,
   "TraceChainSyncHeaderServer": false,
   "TraceChainSyncProtocol": false,
@@ -40,7 +40,7 @@
   "TraceLocalRootPeers": true,
   "TraceLocalTxSubmissionProtocol": false,
   "TraceLocalTxSubmissionServer": false,
-  "TraceMempool": true,
+  "TraceMempool": false,
   "TraceMux": false,
   "TracePeerSelection": true,
   "TracePeerSelectionActions": true,
@@ -52,18 +52,19 @@
   "TracingVerbosity": "NormalVerbosity",
   "TurnOnLogMetrics": true,
   "TurnOnLogging": true,
+  "MaxConcurrencyDeadline": 2,
   "defaultBackends": [
     "KatipBK"
   ],
   "defaultScribes": [
     [
-      "StdoutSK",
-      "stdout"
+      "FileSK",
+      "/logs/cnode.json"
     ]
   ],
   "hasEKG": 12788,
   "hasPrometheus": [
-    "127.0.0.1",
+    "0.0.0.0",
     12798
   ],
   "minSeverity": "Info",
@@ -84,17 +85,18 @@
   },
   "rotation": {
     "rpKeepFilesNum": 10,
-    "rpLogLimitBytes": 5000000,
+    "rpLogLimitBytes": 50000000,
     "rpMaxAgeHours": 24
   },
   "setupBackends": [
-    "KatipBK"
+    "KatipBK",
+    "EKGViewBK"
   ],
   "setupScribes": [
     {
-      "scFormat": "ScText",
-      "scKind": "StdoutSK",
-      "scName": "stdout",
+      "scKind": "FileSK",
+      "scName": "/logs/cnode.json",
+      "scFormat": "ScJson",
       "scRotation": null
     }
   ]
