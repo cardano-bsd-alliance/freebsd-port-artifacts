@@ -1,9 +1,32 @@
 {
-  "Producers": [
+  "LocalRoots": {
+    "groups": [
+      {
+        "localRoots": {
+          "accessPoints": [
+            {
+               "address": "127.127.127.127",
+               "port": 7777
+            }
+          ],
+          "advertise": false
+        },
+        "valency": 1
+      }
+    ]
+  },
+  "PublicRoots": [
     {
-      "addr": "relays-new.cardano-testnet.iohkdev.io",
-      "port": 3001,
-      "valency": 2
+      "publicRoots": {
+        "accessPoints": [
+          {
+            "address": "relays-new.cardano-testnet.iohkdev.io",
+            "port": 3001
+          }
+        ],
+        "advertise": false
+      }
     }
-  ]
+  ],
+  "useLedgerAfterSlot": 61888888
 }
