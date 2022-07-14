@@ -10,8 +10,8 @@
   ],
   "defaultScribes": [
     [
-      "StdoutSK",
-      "stdout"
+      "FileSK",
+      "/logs/dbsync.json"
     ]
   ],
   "minSeverity": "Info",
@@ -96,7 +96,7 @@
   },
   "rotation": {
     "rpKeepFilesNum": 10,
-    "rpLogLimitBytes": 5000000,
+    "rpLogLimitBytes": 50000000,
     "rpMaxAgeHours": 24
   },
   "setupBackends": [
@@ -105,9 +105,9 @@
   ],
   "setupScribes": [
     {
-      "scFormat": "ScText",
-      "scKind": "StdoutSK",
-      "scName": "stdout",
+      "scKind": "FileSK",
+      "scName": "/logs/dbsync.json",
+      "scFormat": "ScJson",
       "scRotation": null
     }
   ]
