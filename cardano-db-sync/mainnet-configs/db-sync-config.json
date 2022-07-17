@@ -11,7 +11,7 @@
   "defaultScribes": [
     [
       "FileSK",
-      "/logs/dbsync.json"
+      "/var/db/cardano_db_sync/logs/dbsync.json"
     ]
   ],
   "minSeverity": "Info",
@@ -106,7 +106,7 @@
   "setupScribes": [
     {
       "scKind": "FileSK",
-      "scName": "/logs/dbsync.json",
+      "scName": "/var/db/cardano_db_sync/logs/dbsync.json",
       "scFormat": "ScJson",
       "scRotation": null
     }
