@@ -63,6 +63,7 @@
   "TracingVerbosity": "NormalVerbosity",
   "TurnOnLogMetrics": true,
   "TurnOnLogging": true,
+  "MaxConcurrencyDeadline": 4,
   "defaultBackends": [
     "KatipBK"
   ],
