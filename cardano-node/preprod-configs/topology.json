@@ -14,7 +14,7 @@
     {
       "publicRoots": {
         "accessPoints": [
-          { "address": "preprod-node.world.dev.cardano.org", "port": 30000, "valency": 2,"name": "iog" }
+          { "address": "preprod-node.world.dev.cardano.org", "port": 30000, "valency": 2, "name": "iog" }
         ],
         "advertise": false
       }
