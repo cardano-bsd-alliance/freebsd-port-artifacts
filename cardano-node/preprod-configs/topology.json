@@ -1,24 +1,27 @@
 {
-  "LocalRoots": {
-    "groups": [
-      {
-        "localRoots": {
-          "accessPoints": [],
-          "advertise": false
-        },
-        "valency": 1
-      }
-    ]
-  },
-  "PublicRoots": [
-    {
-      "publicRoots": {
-        "accessPoints": [
-          { "address": "preprod-node.world.dev.cardano.org", "port": 30000, "valency": 2, "name": "iog" }
-        ],
-        "advertise": false
-      }
+  "localRoots": [
+    { "accessPoints": [
+      { "address": "_", "port": 19999, "name": "My core" }
+    ],
+      "advertise": false,
+      "valency": 1
+    },
+    { "accessPoints": [
+      { "address": "_", "port": 19999, "name": "relay1" },
+      { "address": "_", "port": 19999, "name": "relay2" },
+      { "address": "_", "port": 19999, "name": "relay3" },
+      { "address": "_", "port": 19999, "name": "relay4" }
+    ],
+      "advertise": true,
+      "valency": 4
     }
   ],
-  "useLedgerAfterSlot": 4642000
+  "publicRoots": [
+    { "accessPoints": [
+      { "address": "preprod-node.world.dev.cardano.org", "port": 30000, "name": "iog" }
+    ],
+      "advertise": true
+    }
+  ],
+  "useLedgerAfterSlot": 25257361
 }
